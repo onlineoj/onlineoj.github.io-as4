@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Fancify Shamcify</title>
+
+		<!-- link to your script file here -->
+		
+	</head>
+
+	<body>
+		<h1>Fancify my Text</h1>
+		<!-- Your UI controls go here -->
+		<form>
+				Text
+			<br>
+			<textarea id="textarea" name="text" rows="4" cols="30"> 
+				Text
+			</textarea>
+			<br>
+
+				Fancify
+			<br>
+				<textarea id="fancify_textarea" name="text" rows="4" cols="30">
+			
+			</textarea> 
+			<br>
+				
+			<br>
+				<input type="radio" 
+						name="FancyShancy" 
+						value="true" 
+						onclick="setBackground(this.value);"> FancyShancy
+			
+
+				 <input type="radio" 
+				 name="BoringBetty" 
+				 value="false" 
+				 onclick="setBackground(this.value);"> BoringBetty
+
+		  </label>
+			<br>
+
+			<script src="fancifymytext.js"></script>
+			<input 
+			    id="bigger" 
+				type="button" 
+				value="Bigger" 
+				onclick="hello(); increaseFontSize(); "
+				
+ 		    />
+			<br>
+
+			 <script> 
+				let two = document.getElementById("fancify_textarea");
+					document.getElementById("textarea").addEventListener("input", function(){
+ 					  two.value = this.value; 
+					  });
+			</script>
+
+			<script> 
+					function increaseFontSize() {
+						value = document.getElementById("fancify_textarea").style.fontSize = "150%";
+						}
+			</script>
+
+			 <script>
+					function setBackground(bg) {
+						if (bg == "true") {
+							document.body.style.backgroundColor = "red";
+						} else if (bg = "false") {
+							document.body.style.backgroundColor = "white";
+							value = document.getElementById("fancify_textarea").style.fontSize = "100%";
+						}
+					}
+					 
+					
+			</script>
+			
+		</form>
+		
+	</body>
+</html>
